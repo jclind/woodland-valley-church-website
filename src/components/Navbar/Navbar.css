@@ -1,0 +1,9 @@
+nav {
+  height: var(--nav-height);
+  background: red;
+}
+.nav-header {
+}
+nav img {
+  height: var(--nav-height);
+}
