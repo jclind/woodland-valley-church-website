@@ -27,8 +27,4 @@ export const links = [
     name: 'Sermons',
     path: '/Sermons',
   },
-  {
-    name: 'Visit',
-    path: '/Visit',
-  },
 ]

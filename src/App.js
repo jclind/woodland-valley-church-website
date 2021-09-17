@@ -1,5 +1,6 @@
 import Layout from './components/Layout/Layout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import 'normalize.css'
 import About from './pages/About/About'
 import Beliefs from './pages/Beliefs/Beliefs'
 import Events from './pages/Events/Events'
@@ -15,13 +16,13 @@ function App() {
       <Layout>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/our-beliefs' component={Beliefs} />
-          <Route path='/events' component={Events} />
-          <Route path='/give' component={Give} />
-          <Route path='/ministries' component={Ministries} />
-          <Route path='/sermons' component={Sermons} />
-          <Route path='/visit' component={Visit} />
+          <Route path='/about' exact component={About} />
+          <Route path='/our-beliefs' exact component={Beliefs} />
+          <Route path='/events' exact component={Events} />
+          <Route path='/give' exact component={Give} />
+          <Route path='/ministries' exact component={Ministries} />
+          <Route path='/sermons' exact component={Sermons} />
+          <Route path='/visit' exact component={Visit} />
         </Switch>
       </Layout>
     </Router>
