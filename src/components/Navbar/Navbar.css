@@ -1,28 +1,28 @@
 .navbar {
-  background: var(--white);
   height: var(--mobile-nav-height);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  margin-bottom: 1rem;
 }
 .nav-center {
   height: inherit;
+  max-width: var(--max-width);
   width: 98vw;
 }
 .nav-header {
-  color: var(--white);
   position: relative;
   height: inherit;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .nav-logo {
+  padding-right: 1rem;
   margin: 0 auto;
 }
 .nav-header img {
-  height: calc(var(--mobile-nav-height) * 0.95);
+  height: calc(var(--mobile-nav-height) * 0.55);
   margin-left: -6px;
   margin-bottom: -9px;
 }
@@ -60,7 +60,7 @@
   z-index: 5;
   top: 0;
   left: 0;
-  background: white;
+  background: var(--backgroundColor);
   min-height: 100vh;
   padding-top: 1rem;
   width: 60vw;
@@ -138,7 +138,7 @@
     height: auto;
   }
   .nav-header img {
-    height: var(--nav-height);
+    height: calc(var(--nav-height) * 0.8);
     margin-left: -6px;
     margin-bottom: -9px;
   }
@@ -164,7 +164,7 @@
     padding: 0;
     border-top: none;
     margin-right: 0.2rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .visit-link {
     width: 100%;
@@ -173,15 +173,12 @@
     margin-right: 3rem;
   }
   .active-link {
-    color: var(--primary-700);
+    color: var(--primary-500);
   }
 }
 @media screen and (min-width: 1200px) {
   .nav-link {
-    color: var(--gray-900);
-    padding: 0;
-    border-top: none;
     margin-right: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 }

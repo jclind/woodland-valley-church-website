@@ -1,3 +1,111 @@
 .hero-container {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: inline-block; /* shrink wrap to image */
+  overflow: hidden; /* hide the excess */
   height: calc(100vh - var(--nav-height));
+  /* margin */
+}
+.hero-container .img {
+  min-height: calc(100vh - var(--nav-height) - 1.3rem);
+  object-fit: cover;
+  /* object-position: */
+  transform: scale(1.5);
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--white);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.6rem;
+  word-spacing: -2px;
+  margin-top: 8rem;
+  margin-bottom: 7rem;
+}
+h2 {
+  width: 90%;
+  color: var(--gray-100);
+  text-align: center;
+  font-size: 2rem !important;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--gray-500);
+  /* border-bottom: 1px solid var(--primary); */
+}
+.btns {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.btns button {
+  height: 60px;
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background: none;
+  color: var(--gray-100);
+  /* color: var(--primary-100); */
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--gray-100);
+}
+.btns button:hover {
+  color: var(--white);
+  border: 2px solid var(--primary) !important;
+  background: var(--primary) !important;
+}
+
+@media screen and (min-width: 715px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  h2 {
+    width: 60%;
+    font-size: 2.3rem !important;
+  }
+  .btns {
+    gap: 4rem;
+  }
+  .break:after {
+    content: '\000A';
+    white-space: pre;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 4.5rem;
+    margin-bottom: 7rem;
+  }
+  h2 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 8rem;
+  }
+  h2 {
+    width: 40%;
+  }
 }

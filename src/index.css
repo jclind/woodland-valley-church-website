@@ -1,3 +1,7 @@
+/* Fonts */
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;800&display=swap');
+
 /* Globals */
 *,
 ::after,
@@ -7,8 +11,9 @@
 
 :root {
   /* COLORS  */
+  /* Primary (Blue) */
   --primary: #005598;
-  --primary-0: #b3cce0;
+  --primary-50: #b3cce0;
   --primary-100: #80aacc;
   --primary-200: #6699c1;
   --primary-300: #4d88b7;
@@ -20,7 +25,20 @@
   --primary-900: #003b6a;
   --primary-1000: #00335b;
   --primary-1100: #00223d;
-
+  /* Secondary (Green) */
+  --secondary: #8bb256;
+  --secondary-50: #dce7cc;
+  --secondary-100: #d0e0bb;
+  --secondary-200: #b9d099;
+  --secondary-300: #a2c177;
+  --secondary-400: #96b966;
+  --secondary-500: #8bb256;
+  --secondary-600: #7da04d;
+  --secondary-700: #6f8e44;
+  --secondary-800: #617c3c;
+  --secondary-900: #536a33;
+  --secondary-1000: #45592b;
+  --secondary-1100: #374722;
   /* gray */
   --gray-0: #fafbfc;
   --gray-50: #f2f4f8;
@@ -53,17 +71,17 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: 'Inconsolata', monospace;
+  --headingFont: 'Montserrat', monospace;
   --bodyFont: 'Montserrat', sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
   --backgroundColor: var(--gray-0);
   --textColor: var(--gray-1000);
-  --borderRadius: 0.25rem;
+  --borderRadius: 0.5rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
+  --max-width: 1500px;
   --fixed-width: 600px;
 
   --nav-height: 7rem;
@@ -217,4 +235,11 @@ button,
 select,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
 }
