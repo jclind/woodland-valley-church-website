@@ -1,0 +1,10 @@
+.about-transition {
+  height: 8rem;
+  width: 100%;
+  background: rgb(139, 178, 86);
+  background: linear-gradient(
+    180deg,
+    var(--secondary-500) 0%,
+    var(--backgroundColor) 100%
+  );
+}

@@ -14,7 +14,7 @@
   transform: scale(1.5);
 }
 
-.content-container {
+.hero-container .content-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
   background: rgba(0, 0, 0, 0.3);
   color: var(--white);
 }
-.content {
+.hero-container .content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@
   width: 90%;
 }
 
-.title {
+.hero-container .title {
   width: 100%;
   text-align: center;
   font-weight: bold;
@@ -42,7 +42,7 @@
   margin-top: 8rem;
   margin-bottom: 7rem;
 }
-h2 {
+.hero-container h2 {
   width: 90%;
   color: var(--gray-100);
   text-align: center;
@@ -51,14 +51,14 @@ h2 {
   border-bottom: 1px solid var(--gray-500);
   /* border-bottom: 1px solid var(--primary); */
 }
-.btns {
+.hero-container .btns {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 1rem;
 }
-.btns button {
+.hero-container .btns button {
   height: 60px;
   padding: 0 1rem;
   font-weight: bold;
@@ -70,42 +70,42 @@ h2 {
   box-shadow: none;
   border: 2px solid var(--gray-100);
 }
-.btns button:hover {
+.hero-container .btns button:hover {
   color: var(--white);
   border: 2px solid var(--primary) !important;
   background: var(--primary) !important;
 }
 
 @media screen and (min-width: 715px) {
-  .title {
+  .hero-container .title {
     font-size: 3.5rem;
   }
-  h2 {
+  .hero-container h2 {
     width: 60%;
     font-size: 2.3rem !important;
   }
-  .btns {
+  .hero-container .btns {
     gap: 4rem;
   }
-  .break:after {
+  .hero-container .break:after {
     content: '\000A';
     white-space: pre;
   }
 }
 @media screen and (min-width: 992px) {
-  .title {
+  .hero-container .title {
     font-size: 4.5rem;
     margin-bottom: 7rem;
   }
-  h2 {
+  .hero-container h2 {
     width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .title {
+  .hero-container .title {
     margin-bottom: 8rem;
   }
-  h2 {
-    width: 40%;
+  .hero-container h2 {
+    white-space: nowrap;
   }
 }
