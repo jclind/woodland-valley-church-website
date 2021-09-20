@@ -1,19 +1,25 @@
-.about-component-container {
+.about-component {
   margin: 0;
   padding: 0;
   background: var(--secondary-500);
   font-size: 1rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-component-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  max-width: var(--max-width);
 }
-.about-component-container .content {
+.about-component .content {
   width: 90%;
   font-size: 1rem;
 }
-.about-component-container .content h1 {
+.about-component .content h1 {
   margin: 0;
   padding: 0;
   padding-bottom: 1rem;
@@ -23,11 +29,11 @@
   font-weight: normal;
   white-space: nowrap;
 }
-.about-component-container .content p {
+.about-component .content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-.about-component-container .content button {
+.about-component .content button {
   outline: none;
   border: none;
   box-shadow: none;
@@ -41,11 +47,11 @@
   font-weight: bold;
   font-size: 1.6rem;
 }
-.about-component-container .content button:hover {
+.about-component .content button:hover {
   background: var(--primary-500);
 }
 
-.about-component-container .image img {
+.about-component .image img {
   padding-top: 2rem;
   width: 90%;
   margin: 0 auto;
@@ -63,20 +69,20 @@
     gap: 2rem;
     align-items: center;
   }
-  .about-component-container .content {
+  .about-component .content {
     max-width: 500px;
   }
-  .about-component-container .content h1 {
+  .about-component .content h1 {
     /* padding-bottom: 3rem; */
     font-weight: bold;
     color: var(--gray-1100);
   }
-  .about-component-container .content p {
+  .about-component .content p {
     font-size: 1.3rem;
     color: var(--gray-1100);
     /* padding-bottom: 2rem; */
   }
-  .about-component-container .image img {
+  .about-component .image img {
     max-width: 800px;
     padding: 0;
     width: 100%;
@@ -84,37 +90,41 @@
   }
 }
 @media screen and (min-width: 1100px) {
-  .about-component-container {
+  .about-component {
     align-items: start;
     gap: 2rem;
   }
-  .about-component-container .content {
+  .about-component .content {
+    flex: 1;
     max-width: 600px;
+  }
+  .about-component .image {
+    flex: 1;
   }
 }
 @media screen and (min-width: 1200px) {
-  .about-component-container {
+  .about-component {
     gap: 5rem;
   }
-  .about-component-container .content {
+  .about-component .content {
     padding-left: 2rem;
   }
-  .about-component-container .content h1 {
+  .about-component .content h1 {
     padding-bottom: 2rem;
   }
-  .about-component-container .image img {
+  .about-component .image img {
     max-width: 700px;
   }
 }
 @media screen and (min-width: 1300px) {
-  .about-component-container .content h1 {
+  .about-component .content h1 {
     padding-bottom: 2.5rem;
   }
-  .about-component-container .content p {
+  .about-component .content p {
     padding-bottom: 2rem;
     font-size: 1.4rem;
   }
-  .about-component-container .image img {
+  .about-component .image img {
     max-width: 800px;
   }
 }

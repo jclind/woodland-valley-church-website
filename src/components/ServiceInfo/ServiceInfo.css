@@ -1,0 +1,265 @@
+/* .service-info-component {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-info-component .title {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.service-info-component .time {
+  width: 100%;
+}
+.service-info-component .invitation-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: var(--gray-50);
+}
+.service-info-component .invitation {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 1.2rem;
+  padding: 0;
+  line-height: 2rem;
+}
+.service-info-component .tag {
+  width: 100%;
+  margin: 0 auto;
+  text-align: end;
+  font-size: 0.9rem;
+  color: var(--mutedText);
+}
+.service-info-component .btn-title {
+  width: 100%;
+  margin-top: 2.5rem;
+  color: var(--gray-1000);
+} */
+/* .service-info-component button {
+  margin-right: auto;
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 !important;
+  font-size: 1.5rem;
+  background: var(--gray-1000);
+  border: 2px solid var(--gray-1000);
+  color: var(--gray-50);
+  outline: none;
+  box-shadow: none;
+} */
+/* .service-info-component button:hover {
+  background: none;
+  color: var(--gray-1000);
+}
+
+@media screen and (min-width: 815px) {
+  .service-info-component {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .service-info-component-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .service-info-component .content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-info-component .title {
+    white-space: nowrap;
+  }
+  .service-info-component .service-info-text {
+    display
+    flex-grow: 1;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .service-info-component .btn-container {
+    margin-top: auto;
+  }
+  .service-info-component .btn-title {
+    margin: 1rem 0;
+  }
+  .service-info-component .invitation-container {
+    background: none;
+    justify-content: center;
+  }
+  .service-info-component .invitation {
+    padding: 1rem;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    background-color: var(--gray-50);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service-info-component .content {
+    margin-right: 6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .service-info-component {
+    gap: 4rem;
+  }
+} */
+
+.service-info-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.service-info-component-container {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 90%;
+  max-width: var(--max-width);
+}
+
+.service-info-component .title {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.service-info-component .time {
+  width: 100%;
+}
+.service-info-component .invitation-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--gray-50);
+}
+
+.service-info-component .invitation {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  line-height: 2rem;
+}
+.service-info-component .invitation p {
+  margin: 0;
+}
+.service-info-component .tag {
+  width: 100%;
+  padding-top: 0.5rem;
+  margin: 0;
+
+  font-size: 0.9rem;
+  color: var(--mutedText);
+  text-align: end;
+}
+.service-info-component .btn-title {
+  width: 100%;
+  margin-top: 2.5rem;
+
+  color: var(--gray-1000);
+}
+.service-info-component button {
+  height: 50px;
+  width: 100%;
+  padding: 0 !important;
+  margin-right: auto;
+  border: 2px solid var(--gray-1000);
+  border-radius: 5px;
+
+  background: var(--gray-1000);
+  color: var(--gray-100);
+  font-size: 1.5rem;
+
+  outline: none;
+  box-shadow: none;
+}
+.service-info-component button:hover {
+  background: none;
+  color: var(--gray-1000);
+}
+@media screen and (min-width: 815px) {
+  .service-info-component-container {
+    margin: 3rem 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-direction: row-reverse;
+    flex: 1 1 0px;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .service-info-component .content,
+  .service-info-component .invitation-container {
+    width: inherit;
+  }
+
+  /* Content Element */
+  .service-info-component .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .service-info-component .time {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--gray-900);
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-400);
+  }
+  .service-info-component .service-info-text {
+    font-size: 1.3rem;
+    color: var(--gray-900);
+    margin: 0;
+  }
+  .service-info-component .btn-container {
+    margin-top: auto;
+  }
+
+  /* Invitation Element */
+  .service-info-component .invitation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+  }
+  .service-info-component .invitation {
+    padding: 1rem;
+    background: var(--gray-100);
+  }
+}
+@media screen and (min-width: 992px) {
+  .service-info-component-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    min-height: 400px;
+    gap: 4rem;
+  }
+
+  .service-info-component .content {
+    /* padding-right: 4rem; */
+  }
+  .service-info-component .invitation-container {
+    /* padding-left: 4rem; */
+  }
+}
