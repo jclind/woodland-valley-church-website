@@ -1,0 +1,32 @@
+.childrens-ministry-component {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/wv-childrens-ministries.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+.childrens-ministry {
+  padding-top: 10rem !important;
+  padding-bottom: 10rem !important;
+  justify-content: start !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+.childrens-ministry-component .title {
+  width: 100%;
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+.childrens-ministry-component .section-text {
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.childrens-ministry-component .section-button {
+  background: var(--backgroundColor);
+  color: var(--gray-1100);
+  /* border: 2px solid var(--white); */
+  /* color: var(--white); */
+}
