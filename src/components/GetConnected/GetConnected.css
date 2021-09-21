@@ -1,0 +1,11 @@
+.get-connected-componenet {
+  background: var(--primary);
+  flex: 1 1 0px;
+}
+.get-connected-componenet .title {
+  color: var(--backgroundColor);
+  padding-bottom: 1rem;
+}
+.get-connected-componenet .section-text {
+  color: var(--backgroundColor);
+}
