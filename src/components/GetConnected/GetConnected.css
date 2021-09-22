@@ -1,11 +1,24 @@
-.get-connected-componenet {
+.get-connected-component {
   background: var(--primary);
-  flex: 1 1 0px;
 }
-.get-connected-componenet .title {
-  color: var(--backgroundColor);
-  padding-bottom: 1rem;
+.get-connected-component .get-connected {
+  padding-top: 6rem !important;
+  padding-bottom: 8rem !important;
+  justify-content: start !important;
+  align-items: center !important;
+  text-align: center;
 }
-.get-connected-componenet .section-text {
+.get-connected-component .title {
   color: var(--backgroundColor);
+  padding-bottom: 3rem;
+  white-space: normal;
+}
+.get-connected-component .section-text {
+  color: var(--backgroundColor);
+  padding-bottom: 3rem;
+}
+
+.get-connected-component .section-button {
+  background: var(--backgroundColor);
+  color: var(--primary);
 }

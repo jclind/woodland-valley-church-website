@@ -1,0 +1,13 @@
+.resources-component .resources {
+}
+
+.resources-component .items {
+  width: 100%;
+  height: 300px;
+  background: red;
+}
+.resources-component .verse {
+  width: 100%;
+  height: 300px;
+  background: green;
+}
