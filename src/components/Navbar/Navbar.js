@@ -47,7 +47,11 @@ const Navbar = () => {
             )
           })}
           <div className='nav-link visit-link'>
-            <NavLink to='/visit' className='btn' onClick={() => setShow(false)}>
+            <NavLink
+              to='/visit'
+              className='section-button'
+              onClick={() => setShow(false)}
+            >
               visit
             </NavLink>
           </div>

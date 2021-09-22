@@ -1,0 +1,20 @@
+.email-list-component .email-list .title {
+  text-align: center;
+}
+.email-list-component .email-list .title {
+}
+.email-list-component .section-subtitle {
+  font-size: 1.5rem;
+}
+
+.email-list-component form {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.email-list-component input {
+  height: 100%;
+}
+.email-list-component button {
+  height: 100%;
+}
