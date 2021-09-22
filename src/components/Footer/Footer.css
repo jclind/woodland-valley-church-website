@@ -1,3 +1,9 @@
 footer {
-  background: green;
+  background: var(--gray-1000);
+}
+footer .section-title {
+  color: var(--backgroundColor);
+}
+footer .logo {
+  max-width: 400px;
 }

@@ -7,20 +7,14 @@ const EmailList = () => {
       <div className='section email-list'>
         <div className='title'>
           <h1 className='section-title'>Be Inspired</h1>
-          <h1 className='section-subtitle'>
+          <p className='section-text'>
             Enter your name and email to subscribe to our newsletter
-          </h1>
+          </p>
         </div>
         <form action='' className='form'>
-          <label htmlFor=''>
-            Name:
-            <input type='text' className='name' />
-          </label>
-          <label htmlFor=''>
-            Email:
-            <input type='text' className='name' />
-          </label>
-          <button>Subscribe</button>
+          <input type='text' className='name' placeholder='Your Name' />
+          <input type='text' className='email' placeholder='Your Email' />
+          <button className='section-button'>Subscribe Now</button>
         </form>
       </div>
     </div>
