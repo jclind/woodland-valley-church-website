@@ -4,6 +4,7 @@ import AboutThumbnail from '../../components/AboutThumbnail/AboutThumbnail'
 import ServiceInfo from '../../components/ServiceInfo/ServiceInfo'
 import ChildrensMinistry from '../../components/ChildrensMinistry/ChildrensMinistry'
 import GetConnected from '../../components/GetConnected/GetConnected'
+import Resources from '../../components/Resources/Resources'
 import './Home.css'
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <ServiceInfo />
       <ChildrensMinistry />
       <GetConnected />
+      <Resources />
       {/* <div className='about-transition'></div> */}
       <br />
       <br />

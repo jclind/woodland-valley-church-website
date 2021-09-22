@@ -1,13 +1,63 @@
-.resources-component .resources {
+.resources-component .title {
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 .resources-component .items {
   width: 100%;
-  height: 300px;
-  background: red;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
-.resources-component .verse {
-  width: 100%;
-  height: 300px;
-  background: green;
+.resources-component .items .resource {
+  max-width: 550px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: var(--gray-100);
+  padding: 2rem 2rem;
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+.resources-component .items img {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 150px;
+}
+.resources-component .section-button {
+  margin-top: 2rem;
+  padding: 0 3rem;
+  height: 45px;
+  font-size: 1.5rem;
+}
+.resources-component .section-text {
+  text-align: center;
+}
+
+@media screen and (min-width: 815px) {
+  .resources-component .items {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .resources-component .items img {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resources-component .items {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .resources-component .items img {
+    max-width: 80%;
+  }
 }
