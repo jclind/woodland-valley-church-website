@@ -1,0 +1,84 @@
+.about-page .page-hero {
+  background: var(--gray-1000);
+}
+
+.about-page .section .section-title,
+.about-page .section .section-subtitle {
+  text-align: center;
+}
+
+/* Purpose intro section */
+
+.about-page .purpose-intro-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.about-page .purpose-intro {
+  border-bottom: 3px solid var(--primary);
+  gap: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-page .purpose-intro-container {
+    padding: 0;
+  }
+  .about-page .purpose-intro {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 8rem;
+  }
+}
+
+/* Purpose content section */
+.about-page .purpose-content .section-subtitle {
+  padding-bottom: 2rem;
+  color: var(--gray-1000);
+  white-space: normal;
+}
+.about-page .purpose-content .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.about-page .purpose-content .content article {
+  background: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--borderRadius);
+}
+.about-page .purpose-content .purpose-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-1000);
+  white-space: nowrap;
+}
+.about-page .purpose-content .verse {
+  color: var(--red);
+}
+.about-page .purpose-content .ref {
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-page .purpose-content .content {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8rem;
+  }
+  .about-page .purpose-content .content article {
+    flex: 1;
+  }
+}
+
+/* Purpose conclusion section */
+.about-page .purpose-conclusion {
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4rem;
+}
