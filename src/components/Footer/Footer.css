@@ -8,6 +8,7 @@ footer .section {
   justify-content: start;
   align-items: center;
   gap: 0;
+  min-height: fit-content;
 }
 footer .title {
   padding-bottom: 0.5rem;
@@ -55,8 +56,6 @@ footer .contact-info .icon {
 @media screen and (min-width: 815px) {
   footer .section {
     padding: 0;
-  }
-  footer .title {
   }
 }
 

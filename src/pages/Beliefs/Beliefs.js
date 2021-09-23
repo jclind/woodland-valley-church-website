@@ -7,17 +7,17 @@ const Beliefs = () => {
       <div className='hero'>
         <h1 className='hero-title'>What We Believe</h1>
       </div>
+      <div className='statement-of-faith'>
+        <h1 className='title'>Statement Of Faith</h1>
+        <p className='section-text'>
+          There are eight fundamental, doctrinal beliefs that have characterized
+          Bible believing churches throughout the ages. These beliefs are how we
+          trace our lineage back to the time of Jesus Christ. The following
+          beliefs are based directly on the Word of God, and have passed from
+          one generation to the next.
+        </p>
+      </div>
       <section className='beliefs-body'>
-        <div className='statement-of-faith'>
-          <h1 className='title'>Statement Of Faith</h1>
-          <p className='section-text'>
-            There are eight fundamental, doctrinal beliefs that have
-            characterized Bible believing churches throughout the ages. These
-            beliefs are how we trace our lineage back to the time of Jesus
-            Christ. The following beliefs are based directly on the Word of God,
-            and have passed from one generation to the next.
-          </p>
-        </div>
         <div className='statement'>
           <h3 className='statement-title'>
             1. We believe that the <span className='emph'>BIBLE</span> is the
