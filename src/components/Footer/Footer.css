@@ -1,9 +1,70 @@
 footer {
   background: var(--gray-1000);
+  text-align: center;
 }
-footer .section-title {
+footer .section {
+  /* padding: 0; */
+  padding-bottom: 1rem;
+  justify-content: start;
+  align-items: center;
+  gap: 0;
+}
+footer .title {
+  padding-bottom: 0.5rem;
+  margin: 0;
   color: var(--backgroundColor);
+  font-size: 2rem;
 }
-footer .logo {
-  max-width: 400px;
+footer .subtitle {
+  color: var(--gray-200);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  color: var(--backgroundColor);
+  font-size: 2rem;
+  height: 50px;
+  margin: 1rem 0;
+}
+footer .social-links .icon {
+  margin: 0 0.6rem;
+}
+
+footer .contact-info {
+  color: var(--backgroundColor);
+  letter-spacing: 0.9px;
+}
+footer .contact-info div {
+  padding: 0.25rem 0;
+}
+footer .contact-info .email,
+footer .contact-info .phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary);
+}
+footer .contact-info .icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 815px) {
+  footer .section {
+    padding: 0;
+  }
+  footer .title {
+  }
+}
+
+footer span.avoid-wrap {
+  display: inline-block;
+}
+
+footer .copyright {
+  padding-top: 1.5rem;
+  color: var(--gray-800);
 }
