@@ -4,8 +4,8 @@ import './Beliefs.css'
 const Beliefs = () => {
   return (
     <div className='beliefs-page page'>
-      <div className='hero'>
-        <h1 className='hero-title'>What We Believe</h1>
+      <div className='page-hero'>
+        <h1 className='page-hero-title'>What We Believe</h1>
       </div>
       <div className='statement-of-faith'>
         <h1 className='title'>Statement Of Faith</h1>

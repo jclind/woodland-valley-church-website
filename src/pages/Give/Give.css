@@ -1,0 +1,61 @@
+.give-page .page-hero {
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/wv-giving.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.give-page .page-hero .give-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--backgroundColor);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  color: var(--backgroundColor);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Give Online Section */
+.give-page .give-online {
+  gap: 0 !important;
+}
+.give-page .give-online-container {
+  text-align: center;
+}
+.give-page .give-online-container .section-title {
+  padding-bottom: 1rem;
+  margin: 0;
+}
+.give-page .give-online-container .section-text {
+  margin: 0 auto;
+}
+
+.give-page .give-online-container .give-btn {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  border-radius: var(--borderRadius);
+  margin-top: 2rem;
+}
+
+.give-page .footnote {
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 815px) {
+  .give-page .give-online {
+    padding-bottom: 0;
+  }
+  .give-page .give-online-container .section-title {
+    padding-bottom: 2rem;
+  }
+  .give-page .give-online-container .give-btn {
+    margin-top: 4rem;
+  }
+  .give-page .footnote {
+    margin-top: 4rem;
+  }
+}
