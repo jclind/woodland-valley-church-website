@@ -31,16 +31,10 @@ const Footer = () => {
             724-625-4500
           </div>
           <div className='address'>
-            <span Crowe Avenuespan className='avoid-wrap'>
-              225 Crowe Avenue
-            </span>
+            <span className='avoid-wrap'>225 Crowe Avenue</span>
             {', '}
-            <span Crowe Avenuespan className='avoid-wrap'>
-              P.O. Box 815
-            </span>{' '}
-            <span Crowe Avenuespan className='avoid-wrap'>
-              Mars, PA 16046
-            </span>
+            <span className='avoid-wrap'>P.O. Box 815</span>{' '}
+            <span className='avoid-wrap'>Mars, PA 16046</span>
           </div>
         </div>
         <div className='copyright'>

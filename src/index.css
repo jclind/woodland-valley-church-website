@@ -84,6 +84,7 @@
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1500px;
+  --page-max-width: 1000px;
   --fixed-width: 600px;
 
   --nav-height: 7rem;
@@ -269,7 +270,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .section {
-    min-height: 400px;
+    min-height: fit-content;
     gap: 4rem;
   }
 }

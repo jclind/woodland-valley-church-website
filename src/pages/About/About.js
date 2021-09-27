@@ -1,5 +1,20 @@
 import React from 'react'
+import { staff } from '../../assets/data/staff'
 import './About.css'
+
+const StaffArticle = ({ person: { name, title, img } }) => {
+  return (
+    <article className='staff-article'>
+      <div className='image-container'>
+        <img src={img} alt={name} />
+      </div>
+      <div className='content'>
+        <h1 className='name'>{name}</h1>
+        <div className='title'>{title}</div>
+      </div>
+    </article>
+  )
+}
 
 const About = () => {
   return (
@@ -23,6 +38,13 @@ const About = () => {
               world, come together as His family and commit to helping that
               family grow closer to Him. This purpose is drawn from God’s Holy
               Word.
+            </p>
+            <p className='section-text'>
+              Without a purpose, aim or a goal, we will wander around this life
+              ever searching and never finding. At WVC, we have a purpose, and
+              want to help you find and fulfill yours. Come grow with us as we
+              seek to fulfill God’s will in our lives. He has an amazing plan
+              for each of us. Let’s find and fulfill it together!
             </p>
           </div>
         </div>
@@ -60,15 +82,23 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className='section-container purpose-conclusion-container'>
-        <div className='section purpose-conclusion'>
-          <p className='section-text'>
-            Without a purpose, aim or a goal, we will wander around this life
-            ever searching and never finding. At WVC, we have a purpose, and
-            want to help you find and fulfill yours. Come grow with us as we
-            seek to fulfill God’s will in our lives. He has an amazing plan for
-            each of us. Let’s find and fulfill it together!
-          </p>
+      <section className='section-container staff-container'>
+        <div className='section staff'>
+          <h1 className='section-title'>Our Leadership Team</h1>
+          <div className='container'>
+            {/* <div className='pastors-grid'>
+              {staff.map((person, idx) => {
+                return person.title.toLowerCase() === 'senior pastor' ? (
+                  <StaffArticle key={idx} person={person} />
+                ) : null
+              })}
+            </div> */}
+            <div className='staff-grid'>
+              {staff.map((person, idx) => {
+                return <StaffArticle key={idx} person={person} />
+              })}
+            </div>
+          </div>
         </div>
       </section>
     </div>

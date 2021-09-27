@@ -17,7 +17,7 @@
 }
 
 .beliefs-body {
-  max-width: 1000px;
+  max-width: var(--page-max-width);
   width: 90%;
   margin: 0 auto;
   padding-bottom: 2rem;

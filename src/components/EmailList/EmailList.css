@@ -59,10 +59,6 @@
     gap: 0.5rem;
   }
   .email-list-component .email-list {
-    padding-top: 0rem !important;
-    padding-bottom: 1rem !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
     gap: 3rem;
   }
   .email-list-component form .name {
@@ -79,5 +75,81 @@
 @media screen and (min-width: 1200px) {
   .email-list-component form {
     width: 85%;
+  }
+}
+
+/* Staff Elements */
+.about-page .staff {
+  width: 100%;
+}
+.about-page .staff h1 {
+  white-space: normal;
+}
+.about-page .staff .container {
+  padding: 2rem 0;
+}
+.about-page .staff .container div {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .about-page .staff .staff-grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-page .staff .staff-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+}
+
+/* Article */
+.about-page .staff-article {
+  display: flex;
+  column-gap: 1rem;
+  width: 90%;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+.about-page .staff-article .content {
+  text-align: center;
+}
+.about-page .staff-article img {
+  width: 100%;
+}
+.about-page .staff-article .name {
+  padding: 0;
+  margin: 0;
+
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.about-page .staff-article .title {
+  color: var(--mutedText);
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .about-page .staff-article {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  .about-page .staff-article .name {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .about-page .staff-article {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  .about-page .staff-article .name {
+    font-size: 1.8rem;
   }
 }

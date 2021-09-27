@@ -12,9 +12,10 @@
 .about-page .purpose-intro-container {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  border-bottom: 3px solid var(--primary);
 }
 .about-page .purpose-intro {
-  border-bottom: 3px solid var(--primary);
+  /* border-bottom: 3px solid var(--primary); */
   gap: 2rem;
 }
 
@@ -23,10 +24,22 @@
     padding: 0;
   }
   .about-page .purpose-intro {
+    width: 100%;
+  }
+  .about-page .purpose-intro {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: 0;
+    /* margin-top: 4rem; */
+    /* margin-bottom: 4rem; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-page .purpose-intro {
     gap: 8rem;
   }
 }
@@ -52,7 +65,7 @@
 .about-page .purpose-content .purpose-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--gray-1000);
+  color: var(--gray-900);
   white-space: nowrap;
 }
 .about-page .purpose-content .verse {
@@ -65,20 +78,44 @@
 }
 
 @media screen and (min-width: 992px) {
+  .about-page .purpose-content {
+    max-width: var(--page-max-width);
+    justify-content: start;
+    align-items: left;
+  }
+  .about-page .purpose-content .section-subtitle {
+    text-align: left;
+    padding: 0;
+  }
   .about-page .purpose-content .content {
-    flex-direction: row;
+    width: 100%;
+    /* flex-direction: row; */
     align-items: stretch;
-    gap: 8rem;
+    gap: 1rem;
   }
   .about-page .purpose-content .content article {
-    flex: 1;
+    background: var(--backgroundColor);
+    padding: 0rem;
+    border-radius: var(--borderRadius);
   }
 }
 
 /* Purpose conclusion section */
+.about-page .purpose-conclusion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
 .about-page .purpose-conclusion {
+  width: 100%;
+  background: var(--primary);
   align-items: center;
   padding: 0;
   margin: 0;
-  padding-bottom: 4rem;
+}
+.about-page .purpose-conclusion .section-text {
+  color: var(--backgroundColor);
+  margin: 0 auto;
+  padding: 2rem 0;
 }
