@@ -81,6 +81,7 @@
   --textColor: var(--gray-1000);
   --mutedText: var(--gray-700);
   --borderRadius: 0.25rem;
+  --primaryBorder: 3px solid var(--primary);
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1500px;
