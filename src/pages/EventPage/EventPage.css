@@ -1,3 +1,13 @@
+.event-page .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 0.5rem;
+  margin-top: 0;
+}
+
 .event-page .section-title {
   margin-bottom: 2rem;
   font-size: 2.5rem;
@@ -7,12 +17,26 @@
 .event-page .description {
   margin: 0 auto;
 }
+.event-page .section-container .image-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.event-page .section-container .image-container img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
 
 /* Icons */
 .event-page .icons {
+  margin: 0 auto;
   max-width: 600px;
   margin-top: 2rem;
   display: flex;
+  padding: 0 0.5rem;
   justify-content: space-evenly;
   gap: 1rem;
 }
@@ -23,7 +47,11 @@
   align-items: center;
 }
 .event-page .icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
+  /* background: var(--gray-1000); */
 }
 .event-page .icons .label {
   margin: 0;
@@ -34,4 +62,47 @@
 }
 .event-page .icons .text {
   text-align: center;
+}
+.event-page .help {
+  max-width: 100%;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: var(--backgroundColor);
+  background: var(--gray-1000);
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.event-page .section-text .email {
+  color: var(--secondary);
+}
+
+@media screen and (min-width: 815px) {
+  .event-page .icons .icon {
+    font-size: 2.2rem;
+  }
+  .event-page .help {
+    padding: 4rem;
+    margin: 0;
+  }
+  .event-page .icons .label {
+    font-size: 1.2rem;
+    color: var(--gray-1100);
+    font-weight: 600;
+  }
+  .event-page .icons .text {
+    text-align: center;
+  }
+}
+
+.event-page .back-btn {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  color: var(--gray-900);
+}
+.event-page .back-btn .arrow {
+  margin-right: 0.5rem;
+  font-size: 2rem;
 }

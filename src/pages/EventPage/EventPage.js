@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { events } from '../../assets/data/events'
 import { formatDate } from '../../util/dateUtils'
 import { AiOutlineCalendar, AiOutlineClockCircle } from 'react-icons/ai'
 import { IoLocationOutline } from 'react-icons/io5'
+import { BsArrowLeft } from 'react-icons/bs'
 import './EventPage.css'
 
 const EventPage = () => {
@@ -14,12 +16,24 @@ const EventPage = () => {
   const { name, img, date, time, description, recurring, address } = currEvent
   const d = new Date(date)
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className='page event-page'>
       <div className='section-container'>
         <div className='section'>
+          <Link to='/events' className='back-btn'>
+            <BsArrowLeft className='arrow' />
+            Back To Events
+          </Link>
+          <div className='image-container'>
+            <img src={img} alt={name} />
+          </div>
           <div className='title'>
             <h1 className='section-title'>{name}</h1>
+
             <p className='section-text description'>{description}</p>
             <div className='icons'>
               {time ? (
@@ -47,6 +61,10 @@ const EventPage = () => {
           </div>
         </div>
       </div>
+      <p className='section-text help'>
+        Questions? We'd love to help:{'   '}
+        <span className='email'>wvcaa@zoominternet.net</span>
+      </p>
     </div>
   )
 }
