@@ -7,7 +7,6 @@ const Give = () => {
     <div className='page give-page'>
       <div className='page-hero'>
         <h1 className='page-hero-title'>Give</h1>
-        <button className='give-btn'>Give Online</button>
       </div>
       <section className='give-online-container section-container'>
         <div className='section give-online'>
