@@ -9,6 +9,8 @@ import Ministries from './pages/Ministries/Ministries'
 import Sermons from './pages/Sermons/Sermons'
 import Visit from './pages/Visit/Visit'
 import Home from './pages/Home/Home'
+import Error from './pages/Error/Error'
+import EventPage from './pages/EventPage/EventPage'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path='/ministries' exact component={Ministries} />
           <Route path='/sermons' exact component={Sermons} />
           <Route path='/visit' exact component={Visit} />
+          <Route path='/events/:event' children={<EventPage />} />
+          <Route path='*' component={Error} />
         </Switch>
       </Layout>
     </Router>
