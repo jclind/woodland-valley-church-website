@@ -4,11 +4,10 @@ import './Events.css'
 import { events } from '../../assets/data/events'
 import { getMonthName } from '../../util/dateUtils'
 import { getDayName } from '../../util/dateUtils'
-import slugify from 'slugify'
+import { formatDate } from '../../util/dateUtils'
 
-const EventArticle = ({ event: { name, date, time, img, description } }) => {
+const EventArticle = ({ event: { id, name, date, time, img } }) => {
   const d = new Date(date)
-  const slug = slugify(name)
   return (
     <article className='event-article'>
       <div className='image-container'>
@@ -20,12 +19,8 @@ const EventArticle = ({ event: { name, date, time, img, description } }) => {
       </div>
       <div className='content'>
         <h1 className='title'>{name}</h1>
-        <p className='time'>
-          {`${getDayName(d)}, ${getMonthName(
-            d
-          )} ${d.getDate()}, ${d.getFullYear()}, ${time}`}{' '}
-        </p>
-        <Link to={`/events/${slug}`} className='more-info-btn section-button'>
+        <p className='time'>{`${formatDate(d)}, ${time}`} </p>
+        <Link to={`/events/${id}`} className='more-info-btn section-button'>
           More Info
         </Link>
       </div>

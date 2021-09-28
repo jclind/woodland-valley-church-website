@@ -25,7 +25,7 @@ function App() {
           <Route path='/ministries' exact component={Ministries} />
           <Route path='/sermons' exact component={Sermons} />
           <Route path='/visit' exact component={Visit} />
-          <Route path='/events/:event' children={<EventPage />} />
+          <Route path='/events/:id' children={<EventPage />} />
           <Route path='*' component={Error} />
         </Switch>
       </Layout>

@@ -23,3 +23,11 @@ export const getDayName = date => {
   const d = new Date(date)
   return dayNames[d.getDay()]
 }
+
+export const formatDate = date => {
+  const d = new Date(date)
+
+  return `${getDayName(d)}, ${getMonthName(
+    d
+  )} ${d.getDate()}, ${d.getFullYear()}`
+}
