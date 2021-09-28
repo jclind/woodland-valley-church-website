@@ -13,12 +13,8 @@ const EventPage = () => {
   const currEvent = events.find(event => {
     return event.id === parseInt(id)
   })
-  const { name, img, date, time, description, recurring, address } = currEvent
+  const { name, img, date, time, description, address } = currEvent
   const d = new Date(date)
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
 
   return (
     <div className='page event-page'>
