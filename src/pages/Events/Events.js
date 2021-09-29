@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Events.css'
 import { events } from '../../assets/data/events'
 import { getMonthName } from '../../util/dateUtils'
-import { getDayName } from '../../util/dateUtils'
 import { formatDate } from '../../util/dateUtils'
 
 const EventArticle = ({ event: { id, name, date, time, img } }) => {
@@ -44,7 +43,7 @@ const Events = () => {
           <h1 className='section-title'>Don't Miss Our Upcoming Events:</h1>
           <div className='grid'>
             {modEvents.map((event, idx) => {
-              return <EventArticle event={event} />
+              return <EventArticle event={event} key={idx} />
             })}
           </div>
         </div>

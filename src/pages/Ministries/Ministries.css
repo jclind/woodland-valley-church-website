@@ -1,0 +1,66 @@
+.ministries-page .page-hero {
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/wv-ministries.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.ministries-page .page-hero-title {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.ministries-page .page-hero-verse {
+  color: var(--backgroundColor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.ministries-page .page-hero-verse .ref {
+  color: var(--gray-100);
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Ministry Section */
+.ministries-page .ministries-section .ministries {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ministries-page .ministries-section .ministries .head {
+  width: 90%;
+}
+.ministries-page .ministries-section .ministries .head div {
+  max-width: 600px;
+}
+.ministries-page .ministries-section .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ministries-page .ministries-section .image-container img {
+  width: 100%;
+  max-width: 500px;
+}
+.ministries-page .ministries-section .content-container {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .ministries-page .ministries-section .ministries .head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .ministries-page .ministries-section .ministries {
+    /* display: flex; */
+    /* flex-direction: center; */
+  }
+}

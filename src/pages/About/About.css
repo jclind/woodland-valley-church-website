@@ -1,5 +1,8 @@
 .about-page .page-hero {
-  background: var(--gray-1000);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../../assets/images/wv-about.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .about-page .section .section-title,

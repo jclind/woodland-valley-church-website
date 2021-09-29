@@ -73,7 +73,7 @@
 .events-page .event-article .content {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 0.5rem 1rem;
 }
 .events-page .event-article .date h1 {
