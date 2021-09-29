@@ -3,7 +3,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../../assets/images/wv-church-image.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 40%;
 }
 
 .visit-page .page-hero .page-hero-title {
@@ -27,36 +27,51 @@
 }
 /* Info Section */
 .visit-page .info-container .time {
+  max-width: 1000px;
   background: var(--primary);
   margin: 0 auto;
   margin-bottom: 2rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 .visit-page .time .section-title {
   font-size: 2.5rem;
   color: var(--backgroundColor);
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 .visit-page .time .section-subtitle {
   color: var(--gray-200);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .visit-page .section-container .section-text {
   padding-top: 1rem;
 }
 
-.visit-page .section-container .info-grid {
+.visit-page .info-grid {
   text-align: center;
 }
-.visit-page .section-container .info-grid .section-subtitle {
+.visit-page .info-grid .section-subtitle {
   color: var(--primary);
 }
-.visit-page .section-container .info-grid > div {
+.visit-page .info-grid > div {
   margin-top: 2rem;
 }
+.visit-page .info-grid .to-expect .childrens-ministry-text {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  color: var(--gray-900);
+}
+.visit-page .info-grid .to-expect .childrens-ministry-text .link {
+  text-decoration: none;
+  color: var(--secondary);
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+}
 
-.visit-page .section-container .info-grid .contact-info div {
+.visit-page .info-grid .contact-info div {
   padding: 0.25rem 0;
 }
 .visit-page .contact-info .email,
@@ -75,12 +90,31 @@
   margin-right: 0.5rem;
 }
 
-.visit-page .section-container .info-grid .address .section-text {
+.visit-page .info-grid .address .section-text {
   font-size: 1.5rem;
 }
-.visit-page .section-container .info-grid .address .section-button {
+.visit-page .info-grid .address .section-button {
   width: fit-content;
   margin: 0 auto;
 
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 815px) {
+  .visit-page .info-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 2rem;
+  }
+  .visit-page .info-grid > div {
+    padding: 0;
+    margin: 0;
+  }
+  .visit-page .info-grid .to-expect {
+    grid-row: 1 / 3;
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AiFillMail, AiFillPhone } from 'react-icons/ai'
 import './Visit.css'
 
@@ -29,6 +30,12 @@ const Visit = () => {
                 Our services include a family friendly atmosphere, dynamic
                 worship, and applicable preaching from God's Word that can
                 impact your life right now.
+              </p>
+              <p className='section-text childrens-ministry-text'>
+                *Children's ministry available every Sunday. <br />
+                <Link to='/' className='link'>
+                  More Details
+                </Link>
               </p>
             </div>
             <div className='contact'>
