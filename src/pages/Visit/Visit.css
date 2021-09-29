@@ -9,12 +9,78 @@
 .visit-page .page-hero .page-hero-title {
   margin-bottom: 1rem;
 }
-.visit-page .page-hero .section-button {
+.visit-page .section-button {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 1rem;
   padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+.visit-page .section-container {
+  padding: 2rem 0;
+}
+.visit-page .info {
+  width: 90%;
+}
+/* Info Section */
+.visit-page .info-container .time {
+  background: var(--primary);
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+.visit-page .time .section-title {
+  font-size: 2.5rem;
+  color: var(--backgroundColor);
+  text-align: center;
+}
+.visit-page .time .section-subtitle {
+  color: var(--gray-200);
+  font-size: 1.3rem;
+  text-align: center;
+}
+.visit-page .section-container .section-text {
+  padding-top: 1rem;
+}
+
+.visit-page .section-container .info-grid {
+  text-align: center;
+}
+.visit-page .section-container .info-grid .section-subtitle {
+  color: var(--primary);
+}
+.visit-page .section-container .info-grid > div {
+  margin-top: 2rem;
+}
+
+.visit-page .section-container .info-grid .contact-info div {
+  padding: 0.25rem 0;
+}
+.visit-page .contact-info .email,
+.visit-page .contact-info .phone {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-1000);
+}
+.visit-page .contact-info .email {
+  margin-top: 1rem;
+}
+.visit-page .contact-info .icon {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}
+
+.visit-page .section-container .info-grid .address .section-text {
+  font-size: 1.5rem;
+}
+.visit-page .section-container .info-grid .address .section-button {
+  width: fit-content;
+  margin: 0 auto;
+
   font-size: 1.5rem;
 }
