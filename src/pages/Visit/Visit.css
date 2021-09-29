@@ -1,0 +1,20 @@
+.visit-page .page-hero {
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/wv-church-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.visit-page .page-hero .page-hero-title {
+  margin-bottom: 1rem;
+}
+.visit-page .page-hero .section-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+}
