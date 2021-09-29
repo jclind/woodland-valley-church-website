@@ -31,7 +31,16 @@
   justify-content: center;
   align-items: center;
 }
+.ministries-page .ministries-section .section-title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 .ministries-page .ministries-section .ministries .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90%;
 }
 .ministries-page .ministries-section .ministries .head div {
@@ -51,6 +60,66 @@
   margin-top: 1rem;
 }
 
+/* Icons */
+.ministries-page .ministries-section .date-time {
+  width: 100%;
+}
+.ministries-page .icons {
+  margin: 0.5rem auto 1rem auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  padding: 0 0.5rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.ministries-page .icons div {
+  max-width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ministries-page .icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-right: 0.25rem;
+  /* background: var(--gray-1000); */
+}
+.ministries-page .icons .label {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: var(--gray-1100);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.ministries-page .icons .text {
+  /* color: var(--primary); */
+  text-decoration: underline;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 815px) {
+  .event-page .icons .icon {
+    font-size: 2rem;
+  }
+  .event-page .help {
+    padding: 4rem;
+    margin: 0;
+  }
+  .event-page .icons .label {
+    font-size: 1.2rem;
+    color: var(--gray-1100);
+    font-weight: 600;
+  }
+  .event-page .icons .text {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 992px) {
   .ministries-page .ministries-section .ministries .head {
     display: grid;
@@ -62,5 +131,73 @@
   .ministries-page .ministries-section .ministries {
     /* display: flex; */
     /* flex-direction: center; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ministries-page .ministries-section .ministries .head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1300px;
+    padding: 0 2rem;
+  }
+  .ministries-page .ministries-section .ministries {
+    /* display: flex; */
+    /* flex-direction: center; */
+  }
+}
+
+/* Body */
+.ministries-page .ministries-section .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: var(--gray-50);
+}
+.ministries-page .ministries-section .body .statements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--gray-50);
+  padding: 2rem;
+}
+.ministries-page .ministries-section .body .statements div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+.ministries-page .ministries-section .body .statements .title {
+  color: var(--primary);
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.ministries-page .ministries-section .body .statements .text {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+.ministries-page .ministries-section .body .statements .verse {
+  color: var(--red);
+}
+.ministries-page .ministries-section .body .statements .verse .ref {
+  display: block;
+  margin-left: auto;
+  text-align: right;
+  color: var(--gray-700);
+}
+
+@media screen and (min-width: 815px) {
+  .ministries-page .ministries-section .body .statements {
+    flex-direction: row;
+    align-items: start;
+    gap: 2rem;
+    padding: 3rem 2rem;
   }
 }
