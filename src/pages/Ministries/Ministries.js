@@ -15,11 +15,12 @@ const Ministry = ({
     missionsStatement,
     verse,
   },
+  idx,
 }) => {
   return (
     <section className='section-container ministries-section'>
       <div className='ministries'>
-        <div className='head'>
+        <div className={idx % 2 !== 0 ? 'head reverse' : 'head'}>
           {img ? (
             <div className='image-container'>
               <img src={img} alt={name} />
@@ -57,26 +58,28 @@ const Ministry = ({
             {description ? <p className='section-text'>{description}</p> : null}
           </div>
         </div>
-        <div className='body'>
-          <div className='statements'>
-            {missionsStatement ? (
-              <div className='missions-statement'>
-                <div className='title section-subtitle'>
-                  Missions Statement:
+        {missionsStatement || verse.text ? (
+          <div className='body'>
+            <div className='statements'>
+              {missionsStatement ? (
+                <div className='missions-statement'>
+                  <div className='title section-subtitle'>
+                    Missions Statement:
+                  </div>
+                  <p className='text section-text'>{missionsStatement}</p>
                 </div>
-                <p className='text section-text'>{missionsStatement}</p>
-              </div>
-            ) : null}
-            {verse ? (
-              <div className='ministry-verse'>
-                <div className='title section-subtitle'>Ministry Verse:</div>
-                <p className='text section-text verse'>
-                  {verse.text} <span className='ref'>-{verse.ref}</span>
-                </p>
-              </div>
-            ) : null}
+              ) : null}
+              {verse.text ? (
+                <div className='ministry-verse'>
+                  <div className='title section-subtitle'>Ministry Verse:</div>
+                  <p className='text section-text verse'>
+                    {verse.text} <span className='ref'>-{verse.ref}</span>
+                  </p>
+                </div>
+              ) : null}
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   )
@@ -94,7 +97,15 @@ const Ministries = () => {
           <span className='ref'>[Acts 6:4]</span>
         </h3>
       </div>
-      <Ministry ministry={ministriesData[0]} />
+      <div className='ministries-container'>
+        {ministriesData.map((ministry, idx) => {
+          return <Ministry ministry={ministry} idx={idx} key={idx} />
+        })}
+      </div>
+      <p className='section-text help'>
+        Questions? We'd love to help:{'   '}
+        <span className='email'>wvcaa@zoominternet.net</span>
+      </p>
     </div>
   )
 }
