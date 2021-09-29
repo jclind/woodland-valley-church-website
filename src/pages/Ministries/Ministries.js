@@ -20,51 +20,61 @@ const Ministry = ({
     <section className='section-container ministries-section'>
       <div className='ministries'>
         <div className='head'>
-          <div className='image-container'>
-            <img src={img} alt={name} />
-          </div>
+          {img ? (
+            <div className='image-container'>
+              <img src={img} alt={name} />
+            </div>
+          ) : null}
           <div className='content-container'>
             <h1 className='section-title'>{name}</h1>
-            <div className='date-time'>
-              <div className='icons'>
-                {time ? (
-                  <div className='time'>
-                    <AiOutlineClockCircle className='icon' />
-                    <p className='label'>Time:</p>
-                    <p className='text'>{time}</p>
-                  </div>
-                ) : null}
-                {date ? (
-                  <div className='date'>
-                    <AiOutlineCalendar className='icon' />
-                    <p className='label'>Date:</p>
-                    <p className='text'>{date}</p>
-                  </div>
-                ) : null}
-                {address ? (
-                  <div className='location'>
-                    <IoLocationOutline className='icon' />
-                    <p className='label'>Address:</p>
-                    <p className='text'>{address}</p>
-                  </div>
-                ) : null}
+            {date || time || address ? (
+              <div className='date-time'>
+                <div className='icons'>
+                  {time ? (
+                    <div className='time'>
+                      <AiOutlineClockCircle className='icon' />
+                      <p className='label'>Time:</p>
+                      <p className='text'>{time}</p>
+                    </div>
+                  ) : null}
+                  {date ? (
+                    <div className='date'>
+                      <AiOutlineCalendar className='icon' />
+                      <p className='label'>Date:</p>
+                      <p className='text'>{date}</p>
+                    </div>
+                  ) : null}
+                  {address ? (
+                    <div className='location'>
+                      <IoLocationOutline className='icon' />
+                      <p className='label'>Address:</p>
+                      <p className='text'>{address}</p>
+                    </div>
+                  ) : null}
+                </div>
               </div>
-            </div>
-            <p className='section-text'>{description}</p>
+            ) : null}
+            {description ? <p className='section-text'>{description}</p> : null}
           </div>
         </div>
         <div className='body'>
           <div className='statements'>
-            <div className='missions-statement'>
-              <div className='title section-subtitle'>Missions Statement:</div>
-              <p className='text section-text'>{missionsStatement}</p>
-            </div>
-            <div className='ministry-verse'>
-              <div className='title section-subtitle'>Ministry Verse:</div>
-              <p className='text section-text verse'>
-                {verse.text} <span className='ref'>-{verse.ref}</span>
-              </p>
-            </div>
+            {missionsStatement ? (
+              <div className='missions-statement'>
+                <div className='title section-subtitle'>
+                  Missions Statement:
+                </div>
+                <p className='text section-text'>{missionsStatement}</p>
+              </div>
+            ) : null}
+            {verse ? (
+              <div className='ministry-verse'>
+                <div className='title section-subtitle'>Ministry Verse:</div>
+                <p className='text section-text verse'>
+                  {verse.text} <span className='ref'>-{verse.ref}</span>
+                </p>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
