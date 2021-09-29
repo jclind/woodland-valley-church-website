@@ -14,18 +14,22 @@ import EventPage from './pages/EventPage/EventPage'
 
 function App() {
   return (
-    <Layout>
-      <Route path='/' exact component={Home} />
-      <Route path='/about' exact component={About} />
-      <Route path='/our-beliefs' exact component={Beliefs} />
-      <Route path='/events' exact component={Events} />
-      <Route path='/give' exact component={Give} />
-      <Route path='/ministries' exact component={Ministries} />
-      <Route path='/sermons' exact component={Sermons} />
-      <Route path='/visit' exact component={Visit} />
-      <Route path='/events/:id' children={<EventPage />} />
-      <Route path='*' component={Error} />
-    </Layout>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about' exact component={About} />
+          <Route path='/our-beliefs' exact component={Beliefs} />
+          <Route path='/events' exact component={Events} />
+          <Route path='/give' exact component={Give} />
+          <Route path='/ministries' exact component={Ministries} />
+          <Route path='/sermons' exact component={Sermons} />
+          <Route path='/visit' exact component={Visit} />
+          <Route path='/events/:id' children={<EventPage />} />
+          <Route path='*' component={Error} />
+        </Switch>
+      </Layout>
+    </Router>
   )
 }
 

@@ -16,6 +16,10 @@ const EventPage = () => {
   const { name, img, date, time, description, address } = currEvent
   const d = new Date(date)
 
+  useEffect(() => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+  }, [])
+
   return (
     <div className='page event-page'>
       <div className='section-container'>
