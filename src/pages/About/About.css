@@ -15,7 +15,7 @@
 .about-page .purpose-intro-container {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: var(--primaryBorder);
+  /* border-bottom: var(--primaryBorder); */
 }
 .about-page .purpose-intro {
   /* border-bottom: 3px solid var(--primary); */
@@ -24,6 +24,7 @@
 
 @media screen and (min-width: 992px) {
   .about-page .purpose-intro-container {
+    background: var(--secondary);
     padding: 0;
   }
   .about-page .purpose-intro {
@@ -39,6 +40,9 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+  }
+  .about-page .purpose-intro .section-title {
+    /* color: var(--primary); */
   }
 }
 @media screen and (min-width: 1200px) {
