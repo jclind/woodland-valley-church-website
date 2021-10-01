@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { sermons, sermonSeries } from '../../assets/data/sermons'
 import { youtubeParser } from '../../util/youtubeParser'
+import { formatDate } from '../../util/dateUtils'
 // import $ from 'jquery'
+import './Sermons.css'
 
 const Sermons = () => {
   const sortedSermons = [...sermons].sort(function (a, b) {
@@ -24,22 +26,40 @@ const Sermons = () => {
   //
 
   return (
-    <div>
-      {sortedSermons.map((sermon, idx) => {
-        const currID = youtubeParser(sermon.link)
-        const src = `https://www.youtube.com/embed/${currID}`
-        return (
-          <iframe
-            width='1280'
-            height='720'
-            src={src}
-            title='YouTube video player'
-            frameborder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowfullscreen
-          ></iframe>
-        )
-      })}
+    <div className='page sermons-page'>
+      <div className='sermons-container'>
+        <h1 className='section-title'>Recent Message</h1>
+        <div className='sermons-grid'>
+          {sortedSermons.map((sermon, idx) => {
+            const currID = youtubeParser(sermon.link)
+            const src = `https://www.youtube.com/embed/${currID}`
+            return (
+              <div className='video-container'>
+                <div className='video'>
+                  <iframe
+                    key={idx}
+                    src={src}
+                    width='100%'
+                    height='100%'
+                    title='YouTube video player'
+                    frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    className={idx === 0 ? 'recent-service' : null}
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h1 className='video-title section-subtitle'>{sermon.title}</h1>
+                <div className='video-date'>
+                  {formatDate(new Date(sermon.date))}
+                </div>
+                <p className='seciton-text video-description'>
+                  {sermon.description}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }
