@@ -25,6 +25,13 @@ export const sermons = [
     description: 'Dave Otto shares "The Good News" drawing upon Romans 5:1-6',
     date: 'Sun Sep 05 2021 10:00:00 GMT-0400 (Eastern Daylight Time)',
   },
+  {
+    link: 'https://youtu.be/Myw7Uh2RgPo',
+    title: 'Move',
+    description:
+      'Rev Pat Summers from ThinkMissions.org helps us understand how we can move from passive to passionate when serving our Creator.  1 Samuel 13 & 14',
+    date: 'Sun Aug 29 2021 10:00:00 GMT-0400 (Eastern Daylight Time)',
+  },
 ]
 
 export const sermonSeries = [

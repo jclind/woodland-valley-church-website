@@ -6,10 +6,18 @@ import { formatDate } from '../../util/dateUtils'
 // import $ from 'jquery'
 import './Sermons.css'
 
+const createEmbededLink = url => {
+  const currID = youtubeParser(url)
+  const src = `https://www.youtube.com/embed/${currID}?modestbranding=1`
+  return src
+}
+
 const Sermons = () => {
   const sortedSermons = [...sermons].sort(function (a, b) {
     return new Date(b.date) - new Date(a.date)
   })
+  const recentSermon = sortedSermons[0]
+  const pastSermons = sortedSermons.slice(1)
 
   return (
     <div className='page sermons-page'>
@@ -18,6 +26,72 @@ const Sermons = () => {
         <Link to='/visit' className='section-button'>
           Watch Live
         </Link>
+      </div>
+      <div className='section-container recent-sermon-container'>
+        <div className='section recent-sermon'>
+          <h1 className='section-title'>Recent Sermon</h1>
+          <div className='video-container'>
+            <div className='video'>
+              {recentSermon ? (
+                <iframe
+                  src={createEmbededLink(recentSermon.link)}
+                  width='100%'
+                  height='100%'
+                  title='YouTube video player'
+                  frameBorder='0'
+                  allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                ></iframe>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='section-container past-sermons-container'>
+        <div className='section past-sermons'>
+          <h1 className='section-title'>Past Sermons</h1>
+          <div className='grid'>
+            {pastSermons.map((sermon, idx) => {
+              return (
+                <div className='video-container' key={idx}>
+                  <div className='video'>
+                    <iframe
+                      src={createEmbededLink(sermon.link)}
+                      width='100%'
+                      height='100%'
+                      title='YouTube video player'
+                      frameBorder='0'
+                      allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+      <div className='section-container past-sermon-series-container'>
+        <div className='section past-sermon-series'>
+          <h1 className='section-title'>Past Sermon Series</h1>
+          <div className='grid'>
+            {sermonSeries.map((series, idx) => {
+              return (
+                <div className='video-container' key={idx}>
+                  <div className='video'>
+                    <a
+                      href={series.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <img src={series.img} alt={series.name} />
+                    </a>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </div>
 
