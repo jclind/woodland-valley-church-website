@@ -27,6 +27,7 @@ function App() {
       scrollToTop()
     })
   }, [history])
+
   return (
     <Layout>
       <Switch>
