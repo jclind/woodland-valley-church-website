@@ -41,16 +41,6 @@ export const events = [
     img: 'https://i.ibb.co/GcRY0LY/wv-mens-bible-study.jpg',
   },
   {
-    id: 4,
-    name: 'Mars Applefest',
-    date: getDate(6),
-    time: '11am-4pm',
-    recurring: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas, turpis suscipit imperdiet tincidunt, ante neque malesuada leo, vitae cursus leo diam sit amet nibh. Curabitur accumsan suscipit dolor quis aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non ex efficitur nunc tincidunt porttitor sodales eget enim. Vivamus maximus aliquam turpis id accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum libero felis, convallis at auctor eu, fermentum non libero. Phasellus sit amet elementum ante, quis porta tortor. Donec eget faucibus ante. Nullam feugiat eget nisl in condimentum. Etiam eros tortor, egestas quis nulla vitae, euismod finibus purus. Ut a sodales dui. Vestibulum vitae lacus tristique orci mattis pharetra. Ut vitae eros finibus, commodo elit at, gravida risus. Nullam non suscipit urna.',
-    img: 'https://i.ibb.co/h2STjFM/matheus-cenali-w-Xuz-S9x-R49-M-unsplash.jpg',
-  },
-  {
     id: 5,
     name: 'Sunday Service',
     date: getDate(0),

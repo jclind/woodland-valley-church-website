@@ -18,7 +18,9 @@ const ChildrensMinistries = () => {
         <p className='section-text'>
           Each Sunday morning at 10:00am, during our worship service, we have a
           number of great ministries for your children from four newborn to
-          twelve years old.
+          twelve years old. Upon arrival Sunday morning, your children will be
+          checked into the ministry at our Welcome Desk where they will receive
+          a name tag that serves as a pick up tag for parents.
         </p>
         <div className='ministries-grid'>
           <div className='ministry'>
@@ -32,7 +34,7 @@ const ChildrensMinistries = () => {
             <h1 className='section-subtitle'>Nursery</h1>
             <h3 className='section-secondary-title'>Ages: Newborn - 2</h3>
             <p className='section-text'>
-              A quite nursery is provided for your children to play and learn in
+              A quiet nursery is provided for your children to play and learn in
               a safe environment.
             </p>
           </div>
@@ -43,11 +45,9 @@ const ChildrensMinistries = () => {
             </h3>
             <p className='section-text'>
               Our dedicated teachers will lovingly lead your children in
-              exciting Bible discovery. Upon arrival Sunday morning, your
-              children will be checked into the ministry at our Welcome Desk
-              where they will receive a name tag that serves as a pick up tag
-              for parents. Jesus Jungle begins with a corporate time of worship
-              before children are dismissed to their individual classrooms. ​
+              exciting Bible discovery. Jesus Jungle begins with a corporate
+              time of worship before children are dismissed to their individual
+              classrooms. ​
             </p>
           </div>
         </div>

@@ -40,6 +40,7 @@
   display: grid;
   gap: 1rem;
   width: 90%;
+  border-top: 1px solid var(--gray-400);
 }
 .childrens-ministries-page .ministry {
   background: var(--gray-50);
@@ -59,7 +60,11 @@
 }
 
 @media screen and (min-width: 815px) {
+  .childrens-ministries-page .ministries-container {
+    padding: 1rem 0;
+  }
   .childrens-ministries-page .ministries-grid {
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -67,5 +72,17 @@
   .childrens-ministries-page .ministry {
     width: 48%;
     flex-grow: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  .childrens-ministries-page .ministries-grid {
+    max-width: 1200px;
+    justify-content: start;
+    align-items: start;
+  }
+  .childrens-ministries-page .ministry {
+    width: 30%;
+    flex-grow: 1;
+    background: none;
   }
 }

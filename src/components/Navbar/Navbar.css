@@ -81,7 +81,6 @@
 }
 .nav-links .mobile-logo img {
   width: 50vw;
-  /* max-width: 90%; */
 }
 .nav-link {
   width: 90%;
@@ -166,12 +165,14 @@
     height: var(--nav-height);
   }
   .nav-link {
+    width: fit-content;
     color: var(--gray-800);
     padding: 0;
     border-top: none;
     margin-right: 0rem;
     font-size: 1.2rem;
     margin: 0.9rem;
+    border: 0;
   }
   .visit-link {
     width: 100%;
@@ -181,7 +182,7 @@
   }
 
   .active-link {
-    color: var(--primary-500);
+    color: var(--primary);
   }
 }
 @media screen and (min-width: 1200px) {
