@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import homeImage from '../../assets/images/woodland-valley-home.jpg'
+import { useWindowSize } from '../../util/useWindowSize'
 import './Hero.css'
 const Hero = () => {
+  const { height } = useWindowSize()
+  console.log(height)
+
   return (
-    <div className='hero-container'>
+    <div
+      className='hero-container'
+      style={{ height: `calc(${height}px - var(--mobile-nav-height))` }}
+    >
       <img src={homeImage} alt='Hero' className='img' />
       <div className='content-container'>
         <div className='content'>

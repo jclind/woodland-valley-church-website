@@ -2,23 +2,10 @@ import React, { useState, useLayoutEffect } from 'react'
 import './ServiceInfo.css'
 import { WiTime10 } from 'react-icons/wi'
 import { AiOutlineCalendar } from 'react-icons/ai'
-
-function useWindowSize() {
-  const [width, setWidth] = useState(0)
-  useLayoutEffect(() => {
-    function updateSize() {
-      setWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', updateSize)
-    updateSize()
-    return () => window.removeEventListener('resize', updateSize)
-  }, [])
-  return width
-}
+import { useWindowSize } from '../../util/useWindowSize'
 
 const ServiceInfo = () => {
-  const width = useWindowSize()
+  const { width } = useWindowSize()
 
   if (width >= 815) {
     return (

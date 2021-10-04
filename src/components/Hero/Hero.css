@@ -4,7 +4,7 @@
   position: relative;
   display: inline-block; /* shrink wrap to image */
   overflow: hidden; /* hide the excess */
-  height: calc(100vh - 9rem);
+  /* height: calc(100vh - 9rem); */
   /* margin */
 }
 .hero-container .img {
