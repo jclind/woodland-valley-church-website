@@ -11,6 +11,7 @@ import Visit from './pages/Visit/Visit'
 import Home from './pages/Home/Home'
 import Error from './pages/Error/Error'
 import EventPage from './pages/EventPage/EventPage'
+import ChildrensMinistries from './pages/ChildrensMinistries/ChildrensMinistries'
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
           <Route path='/ministries' exact component={Ministries} />
           <Route path='/sermons' exact component={Sermons} />
           <Route path='/visit' exact component={Visit} />
+          <Route
+            path='/childrens-ministries'
+            exact
+            component={ChildrensMinistries}
+          />
           <Route path='/events/:id' children={<EventPage />} />
           <Route path='*' component={Error} />
         </Switch>

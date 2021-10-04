@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { sermons, sermonSeries } from '../../assets/data/sermons'
 import { youtubeParser } from '../../util/youtubeParser'
-import { formatDate } from '../../util/dateUtils'
 // import $ from 'jquery'
 import './Sermons.css'
 

@@ -1,0 +1,71 @@
+.childrens-ministries-page .page-hero {
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/wv-childrens-ministries-page.jpg');
+  background-size: cover;
+  background-position: 50% 60%;
+}
+.childrens-ministries-page .page-hero-title {
+  margin-bottom: 1rem;
+  line-height: 5rem;
+  padding: 0;
+}
+.childrens-ministries-page .page-hero-verse {
+  color: var(--backgroundColor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.childrens-ministries-page .page-hero-verse .ref {
+  color: var(--gray-100);
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Ministries Container */
+.childrens-ministries-page .ministries-container {
+  flex-direction: column;
+}
+.childrens-ministries-page .ministries-container .section-title {
+  color: var(--primary);
+  padding-top: 1rem;
+}
+.childrens-ministries-page .ministries-container .section-text {
+  padding-top: 0.5rem;
+  width: 90%;
+}
+.childrens-ministries-page .ministries-grid {
+  padding-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  width: 90%;
+}
+.childrens-ministries-page .ministry {
+  background: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  /* align-items: center; */
+}
+.childrens-ministries-page .ministry .section-subtitle {
+  color: var(--gray-1000);
+}
+.childrens-ministries-page .ministry .section-text {
+  width: 100%;
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+@media screen and (min-width: 815px) {
+  .childrens-ministries-page .ministries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .childrens-ministries-page .ministry {
+    width: 48%;
+    flex-grow: 1;
+  }
+}
