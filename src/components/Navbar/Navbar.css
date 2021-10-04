@@ -44,7 +44,7 @@
   color: var(--primary-500);
 }
 .nav-btn.show div {
-  color: var(--white) !important;
+  color: var(--gray-900) !important;
 }
 .nav-btn:hover {
   background: none;
@@ -63,9 +63,10 @@
   background: var(--backgroundColor);
   min-height: 100vh;
   padding-top: 1rem;
-  width: 60vw;
+  width: 100vw;
   overflow: hidden;
   display: flex;
+  align-items: center;
   flex-direction: column;
   transition: var(--transition);
 }
@@ -80,17 +81,20 @@
 }
 .nav-links .mobile-logo img {
   width: 50vw;
+  /* max-width: 90%; */
 }
 .nav-link {
+  width: 90%;
   display: block;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  justify-content: center;
+
   text-align: left;
   font-size: 1.5rem;
+  border-bottom: 1px solid var(--gray-400);
   text-transform: capitalize;
   color: var(--gray-900);
   letter-spacing: var(--letterSpacing);
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   transition: var(--transition);
   font-weight: bold;
 }
@@ -100,7 +104,8 @@
 }
 .visit-link {
   font-weight: bold;
-  /* padding-top: 1rem; */
+  border: none;
+  margin-top: 0.5rem;
   display: flex;
 }
 .visit-link a {
