@@ -9,13 +9,18 @@ const Hero = () => {
         <div className='content'>
           <h1 className='title'>
             Together
-            <span className='break' /> We Make A Difference
+            <span className='break' /> We Make A Difference.
           </h1>
-          <h2>Worship With Us</h2>
+          <h2>
+            <span>Worship With Us</span>
+            <div className='line'></div>
+            <span>10AM Every Sunday</span>
+          </h2>
           <div className='btns'>
             <button className='btn'>Online</button>
             <button className='btn'>In-Person</button>
           </div>
+          <div className='arrow'></div>
         </div>
       </div>
     </div>
