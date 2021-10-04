@@ -11,31 +11,42 @@ import Visit from './pages/Visit/Visit'
 import Home from './pages/Home/Home'
 import Error from './pages/Error/Error'
 import EventPage from './pages/EventPage/EventPage'
-import ChildrensMinistries from './pages/ChildrensMinistries/ChildrensMinistries'
+import ChildrensMinistriesPage from './pages/ChildrensMinistriesPage/ChildrensMinistriesPage'
+import { useHistory } from 'react-router'
+import { useEffect } from 'react'
 
 function App() {
+  const history = useHistory()
+
+  const scrollToTop = () => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+  }
+
+  useEffect(() => {
+    history.listen(() => {
+      scrollToTop()
+    })
+  }, [history])
   return (
-    <Router>
-      <Layout>
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/about' exact component={About} />
-          <Route path='/our-beliefs' exact component={Beliefs} />
-          <Route path='/events' exact component={Events} />
-          <Route path='/give' exact component={Give} />
-          <Route path='/ministries' exact component={Ministries} />
-          <Route path='/sermons' exact component={Sermons} />
-          <Route path='/visit' exact component={Visit} />
-          <Route
-            path='/childrens-ministries'
-            exact
-            component={ChildrensMinistries}
-          />
-          <Route path='/events/:id' children={<EventPage />} />
-          <Route path='*' component={Error} />
-        </Switch>
-      </Layout>
-    </Router>
+    <Layout>
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/about' exact component={About} />
+        <Route path='/our-beliefs' exact component={Beliefs} />
+        <Route path='/events' exact component={Events} />
+        <Route path='/give' exact component={Give} />
+        <Route path='/ministries' exact component={Ministries} />
+        <Route path='/sermons' exact component={Sermons} />
+        <Route path='/visit' exact component={Visit} />
+        <Route
+          path='/childrens-ministries'
+          exact
+          component={ChildrensMinistriesPage}
+        />
+        <Route path='/events/:id' children={<EventPage />} />
+        <Route path='*' component={Error} />
+      </Switch>
+    </Layout>
   )
 }
 

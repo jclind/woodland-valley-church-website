@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './ChildrensMinistry.css'
 
 const ChildrensMinistry = () => {
@@ -11,7 +12,9 @@ const ChildrensMinistry = () => {
           number of great ministries for your children from newborn to 6th
           grade.
         </p>
-        <button className='section-button'>See All Ministries</button>
+        <Link to='/childrens-ministries' className='section-button'>
+          All Ministries
+        </Link>
       </div>
     </div>
   )

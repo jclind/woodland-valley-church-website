@@ -24,8 +24,11 @@
   padding-bottom: 1.5rem;
 }
 .childrens-ministry-component .section-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--backgroundColor);
-  color: var(--gray-1100);
+  color: var(--gray-1000);
   /* border: 2px solid var(--white); */
   /* color: var(--white); */
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './ChildrensMinistries.css'
+import './ChildrensMinistriesPage.css'
 
 const ChildrensMinistries = () => {
   return (
@@ -35,7 +35,7 @@ const ChildrensMinistries = () => {
             <h3 className='section-secondary-title'>Ages: Newborn - 2</h3>
             <p className='section-text'>
               A quiet nursery is provided for your children to play and learn in
-              a safe environment.
+              a safe environment during the service.
             </p>
           </div>
           <div className='ministry'>
