@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/woodland-valley-logo.png'
 import { links } from '../../assets/data/links'
 import Hamburger from 'hamburger-react'
 
-const NavLinkElement = ({ link, setShow }) => {
+const NavLinkElement = ({ link, show, setShow }) => {
   const [expanded, setExpanded] = useState(false)
 
+  useEffect(() => {
+    if (!show) {
+      setExpanded(false)
+    }
+  }, [show])
   const handleOnClick = () => {
     setExpanded(!expanded)
   }
@@ -81,12 +86,24 @@ const Navbar = () => {
       <div className={show ? 'links show-links' : 'links'}>
         <ul>
           <li className='nav-mobile-logo'>
-            <NavLink to='home' className='logo'>
+            <NavLink
+              to='/'
+              className='logo'
+              exact={true}
+              onClick={() => setShow(false)}
+            >
               <img src={logo} alt='logo' />
             </NavLink>
           </li>
           {links.map((link, idx) => {
-            return <NavLinkElement link={link} setShow={setShow} key={idx} />
+            return (
+              <NavLinkElement
+                link={link}
+                show={show}
+                setShow={setShow}
+                key={idx}
+              />
+            )
           })}
           <li>
             <NavLink
