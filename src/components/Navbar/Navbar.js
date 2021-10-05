@@ -5,36 +5,102 @@ import logo from '../../assets/images/woodland-valley-logo.png'
 import { links } from '../../assets/data/links'
 import Hamburger from 'hamburger-react'
 
+const NavLinkElement = ({ link, setShow }) => {
+  const [expanded, setExpanded] = useState(false)
+
+  const handleOnClick = () => {
+    setExpanded(!expanded)
+  }
+
+  return (
+    <li>
+      {link.subLinks ? (
+        <button
+          activeClassName='active-link'
+          className='link'
+          onClick={handleOnClick}
+        >
+          <span className='expand'></span>
+          {link.name}
+        </button>
+      ) : (
+        <NavLink
+          to={link.path}
+          activeClassName='active-link'
+          className='link'
+          exact={true}
+          onClick={() => setShow(false)}
+        >
+          {link.name}
+        </NavLink>
+      )}
+
+      {link.subLinks ? (
+        <ul className={expanded ? 'show' : null}>
+          {link.subLinks.map((subLink, subIdx) => {
+            return (
+              <li key={subIdx}>
+                <NavLink
+                  to={subLink.path}
+                  activeClassName='active-link'
+                  className='link'
+                  exact={true}
+                  onClick={() => setShow(false)}
+                >
+                  {subLink.name}
+                </NavLink>
+              </li>
+            )
+          })}
+        </ul>
+      ) : null}
+    </li>
+  )
+}
+
 const Navbar = () => {
   const [show, setShow] = useState(false)
   return (
     <nav>
-      <div className='logo'>
+      <NavLink
+        to='/'
+        className='logo'
+        exact={true}
+        onClick={() => setShow(false)}
+      >
         <img src={logo} alt='logo' />
+      </NavLink>
+      <button
+        className={show ? 'nav-btn show' : 'nav-btn'}
+        onClick={() => {
+          setShow(!show)
+        }}
+      >
+        <Hamburger size={35} hideOutline={true} toggled={show} />
+      </button>
+      <div className={show ? 'links show-links' : 'links'}>
+        <ul>
+          <li className='nav-mobile-logo'>
+            <NavLink to='home' className='logo'>
+              <img src={logo} alt='logo' />
+            </NavLink>
+          </li>
+          {links.map((link, idx) => {
+            return <NavLinkElement link={link} setShow={setShow} key={idx} />
+          })}
+          <li>
+            <NavLink
+              to='/visit'
+              activeClassName='active-link'
+              className='link'
+              exact={true}
+              onClick={() => setShow(false)}
+            >
+              Visit
+            </NavLink>
+          </li>
+        </ul>
       </div>
-      <ul>
-        {links.map((link, idx) => {
-          return (
-            <li key={idx}>
-              <NavLink to={link.path}>{link.name}</NavLink>
-              {link.subLinks ? (
-                <ul>
-                  {link.subLinks.map((subLink, subIdx) => {
-                    return (
-                      <li key={subIdx}>
-                        <NavLink to={subLink.path}>{subLink.name}</NavLink>
-                      </li>
-                    )
-                  })}
-                </ul>
-              ) : null}
-            </li>
-          )
-        })}
-        <li>
-          <NavLink to='/visit'>Visit</NavLink>
-        </li>
-      </ul>
     </nav>
 
     // <nav className='navbar'>
