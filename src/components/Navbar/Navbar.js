@@ -15,18 +15,25 @@ const NavLinkElement = ({ link, show, setShow }) => {
     }
   }, [show])
   const handleOnClick = () => {
-    setExpanded(!expanded)
+    if (
+      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      setExpanded(!expanded)
+    }
   }
   const setFunctions = () => {
-    const a = document.querySelectorAll('nav ul ul')
-    a.forEach(el => {})
-    // document.querySelectorAll('nav ul ul').forEach(item => console.log(item))
-
     setShow(false)
     setExpanded(false)
   }
   return (
-    <li>
+    <li
+      onMouseEnter={() => {
+        setExpanded(true)
+      }}
+      onMouseLeave={() => setExpanded(false)}
+    >
       {link.subLinks ? (
         <button
           activeClassName='active-link'
