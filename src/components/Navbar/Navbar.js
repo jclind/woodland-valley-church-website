@@ -17,7 +17,14 @@ const NavLinkElement = ({ link, show, setShow }) => {
   const handleOnClick = () => {
     setExpanded(!expanded)
   }
+  const setFunctions = () => {
+    const a = document.querySelectorAll('nav ul ul')
+    a.forEach(el => {})
+    // document.querySelectorAll('nav ul ul').forEach(item => console.log(item))
 
+    setShow(false)
+    setExpanded(false)
+  }
   return (
     <li>
       {link.subLinks ? (
@@ -35,7 +42,7 @@ const NavLinkElement = ({ link, show, setShow }) => {
           activeClassName='active-link'
           className='link'
           exact={true}
-          onClick={() => setShow(false)}
+          onClick={setFunctions}
         >
           {link.name}
         </NavLink>
@@ -51,7 +58,7 @@ const NavLinkElement = ({ link, show, setShow }) => {
                   activeClassName='active-link'
                   className='link'
                   exact={true}
-                  onClick={() => setShow(false)}
+                  onClick={setFunctions}
                 >
                   {subLink.name}
                 </NavLink>
@@ -67,6 +74,15 @@ const NavLinkElement = ({ link, show, setShow }) => {
 const Navbar = () => {
   const [show, setShow] = useState(false)
   const { width } = useWindowSize()
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = 'hidden'
+      // document.body.scroll = 'no'
+    } else {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [show])
 
   useEffect(() => {
     if (width >= 992) {
@@ -113,11 +129,11 @@ const Navbar = () => {
               />
             )
           })}
-          <li>
+          <li className='visit-link'>
             <NavLink
               to='/visit'
               activeClassName='active-link'
-              className='link'
+              className='link section-button'
               exact={true}
               onClick={() => setShow(false)}
             >
