@@ -1,82 +1,85 @@
 nav {
-  padding: 0 2rem;
   height: var(--nav-height);
+  padding: 0 2rem;
 }
+
+/* Logo Image */
 nav .logo {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  font-size: 2rem;
 }
 nav .logo img {
   height: calc(var(--nav-height) * 0.6);
   object-fit: contain;
 }
+
+/* Links container */
 nav .links {
-  z-index: 10;
   position: absolute;
-  overflow-y: scroll;
-  transform: translateX(-101%);
+  z-index: 10;
   top: 0;
   left: 0;
-  min-height: 100vh;
-  padding-top: 1rem;
-  width: 100vw;
+  overflow-y: scroll;
   overflow: hidden;
+  transform: translateX(-101%);
+
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 1rem;
+
+  background: var(--backgroundColor);
   transition: var(--transition);
 }
 nav .links.show-links {
   transform: translateX(0%) !important;
 }
+
+/* Un-ordered list of links */
 nav ul {
-  width: 100%;
-  background: var(--backgroundColor);
-  height: 100vh;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  height: 100vh;
   margin: 0;
-  padding: 0;
+
+  background: var(--backgroundColor);
+}
+/* List item */
+nav ul li {
+  display: inline-block;
+  width: 90%;
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  border-radius: 0;
+  border-bottom: 1px solid var(--gray-400);
+
+  color: red;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+
+  transition: var(--transition);
+}
+/* Link item */
+nav .link {
+  position: relative;
+
+  height: calc(var(--nav-height) * 0.5);
+  width: 100%;
+  padding: 0 1rem;
+
+  color: var(--gray-1000);
 }
 
-nav ul li {
-  position: relative;
-  text-transform: capitalize;
-  display: inline-block;
-  margin: 0 1rem;
-  text-decoration: none;
-  color: red;
-  width: 90%;
-  font-size: 1.6rem;
-  letter-spacing: var(--letterSpacing);
-  padding: 1rem 1rem;
-  transition: var(--transition);
-  border-bottom: 1px solid var(--gray-400);
-  border-radius: 0;
-}
-nav .link {
-  display: flex;
-  position: relative;
-  width: 100% !important;
-  color: var(--gray-1000);
-  padding: 0 1rem;
-  height: calc(var(--nav-height) * 0.5);
-}
-nav .link:visited {
-  /* color: var(--gray-1000); */
-}
-nav ul li .link:hover {
-  /* color: var(--primary-1000); */
-}
-nav .expand:before {
-  content: '+';
-}
 nav .expand {
   position: absolute;
   left: -15px;
 }
+
+/* Dropdown list item */
 nav ul ul li {
   border: none;
 }
@@ -88,49 +91,29 @@ nav ul button {
   border: none;
   box-shadow: none;
 }
+
+/* Active link style */
 .active-link {
   color: var(--primary) !important;
 }
+
 nav .nav-mobile-logo,
 nav .nav-mobile-logo .logo {
   margin: 0;
   padding-left: 0;
 }
+/* Dropdown un-ordered list */
 nav ul ul {
   max-height: 0;
   height: fit-content;
   transition: all 0.3s;
   overflow: hidden;
 }
-nav ul li ul.show {
+nav ul ul.show {
   max-height: 500px;
 }
-/* 
-nav ul ul {
-  position: absolute;
-  z-index: 10;
-  top: calc(var(--nav-height) + 10px);
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-nav ul li:hover > ul {
-  top: var(--nav-height);
-  opacity: 1;
-  visibility: visible;
-}
-nav ul ul li {
-  position: relative;
-  margin: 0;
-  width: 150px;
-  display: list-item;
-  border-top: 1px solid var(--primary);
-}
-nav ul ul li a {
-  line-height: 4rem;
-} */
 
+/* Hamburger Button */
 .nav-btn {
   position: absolute;
   right: 0.5rem;
@@ -159,34 +142,116 @@ nav ul ul li a {
   outline: 0;
 }
 @media screen and (min-width: 992px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav .links {
+    position: relative;
+    transform: translateX(0%);
+    overflow: visible;
+
+    min-height: var(--nav-height);
+    height: var(--nav-height);
+    width: auto;
+    padding-top: 0rem;
+
+    background: var(--backgroundColor);
+    transition: var(--transition);
+  }
+  nav ul {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    background: var(--backgroundColor);
+  }
+  /* List item */
+  nav ul li {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0rem;
+    margin: 0 1rem;
+    border-radius: 0;
+    border-bottom: none;
+    color: red;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+
+    transition: var(--transition);
+  }
+  /* Link item */
+  nav .link {
+    display: flex;
+    align-items: center;
+    height: calc(var(--nav-height) * 0.5);
+    padding: 0 1rem;
+
+    color: var(--gray-1000);
+  }
+
+  nav ul ul {
+    position: absolute;
+    z-index: 11;
+    max-height: 0;
+    /* height: fit-content;
+     */
+    min-width: fit-content;
+    width: 100%;
+    top: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s;
+  }
+  nav ul li:hover > ul {
+    /* top: var(--nav-height); */
+    max-height: 1000px !important;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul ul li {
+    position: relative;
+    z-index: 11;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    display: list-item;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--gray-400);
+  }
+  nav ul ul li a {
+    line-height: 4rem;
+  }
+
   .nav-btn {
     display: none;
   }
   .nav-mobile-logo {
     display: none;
   }
-  /* nav ul ul {
-    position: absolute;
-    z-index: 10;
-    top: calc(var(--nav-height) + 10px);
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
+  nav .expand {
+    display: none;
   }
-  nav ul li:hover > ul {
-    top: var(--nav-height);
-    opacity: 1;
-    visibility: visible;
+}
+
+@media screen and (min-width: 1200px) {
+  nav ul li {
+    font-size: 1.4rem;
   }
-  nav ul ul li {
-    position: relative;
-    margin: 0;
-    width: 150px;
-    display: list-item;
-    border-top: 1px solid var(--primary);
-  }
-  nav ul ul li a {
-    line-height: 4rem;
-  } */
 }

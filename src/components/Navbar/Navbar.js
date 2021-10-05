@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/woodland-valley-logo.png'
 import { links } from '../../assets/data/links'
 import Hamburger from 'hamburger-react'
+import { useWindowSize } from '../../util/useWindowSize'
 
 const NavLinkElement = ({ link, show, setShow }) => {
   const [expanded, setExpanded] = useState(false)
@@ -25,7 +26,7 @@ const NavLinkElement = ({ link, show, setShow }) => {
           className='link'
           onClick={handleOnClick}
         >
-          <span className='expand'></span>
+          <span className='expand'>{expanded ? '-' : '+'}</span>
           {link.name}
         </button>
       ) : (
@@ -65,6 +66,13 @@ const NavLinkElement = ({ link, show, setShow }) => {
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
+  const { width } = useWindowSize()
+
+  useEffect(() => {
+    if (width >= 992) {
+      setShow(false)
+    }
+  }, [width])
   return (
     <nav>
       <NavLink

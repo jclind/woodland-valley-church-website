@@ -18,12 +18,12 @@ export const links = [
     path: '/ministries',
     subLinks: [
       {
-        name: 'events',
-        path: '/events',
+        name: 'our ministries',
+        path: '/ministries',
       },
       {
-        name: 'ministries',
-        path: '/ministries',
+        name: 'events',
+        path: '/events',
       },
     ],
   },
