@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import homeImage from '../../assets/images/woodland-valley-home.jpg'
 import { useWindowSize } from '../../util/useWindowSize'
 import './Hero.css'
-const Hero = () => {
+const Hero = ({ scrollToComponent }) => {
   const { height } = useWindowSize()
-  console.log(height)
 
   return (
     <div
@@ -27,7 +26,7 @@ const Hero = () => {
             <button className='btn'>Online</button>
             <button className='btn'>In-Person</button>
           </div>
-          <div className='arrow'></div>
+          <div className='arrow' onClick={scrollToComponent}></div>
         </div>
       </div>
     </div>

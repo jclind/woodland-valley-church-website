@@ -1,8 +1,13 @@
 import React from 'react'
-// import getConnectedImage from '../../assets/images/wv-get-connected.jpg'
+import { useHistory } from 'react-router'
 import './GetConnected.css'
 
 const GetConnected = () => {
+  const history = useHistory()
+  const handleOnClick = () => {
+    history.push('/events')
+  }
+
   return (
     <div className='get-connected-component section-container'>
       <div className='get-connected section'>
@@ -13,7 +18,9 @@ const GetConnected = () => {
             get connected in a community of fellowship. We'd love to live out
             our faith with you.
           </p>
-          <button className='section-button'>Get Connected</button>
+          <button onClick={handleOnClick} className='section-button'>
+            Get Connected
+          </button>
         </div>
         {/* <div className='image'>
           <img src={getConnectedImage} alt='' />

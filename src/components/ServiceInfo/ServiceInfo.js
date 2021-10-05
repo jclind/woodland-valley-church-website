@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { useHistory } from 'react-router'
 import './ServiceInfo.css'
 import { WiTime10 } from 'react-icons/wi'
 import { AiOutlineCalendar } from 'react-icons/ai'
@@ -6,6 +7,11 @@ import { useWindowSize } from '../../util/useWindowSize'
 
 const ServiceInfo = () => {
   const { width } = useWindowSize()
+  const history = useHistory()
+
+  const handleOnClick = () => {
+    history.push('/visit')
+  }
 
   if (width >= 815) {
     return (
@@ -33,7 +39,9 @@ const ServiceInfo = () => {
                 Woodland Valley welcomes everyone to find and grow their
                 relationship with Jesus.
               </p>
-              <button className='section-button'>Directions And Details</button>
+              <button onClick={handleOnClick} className='section-button'>
+                Directions And Details
+              </button>
             </div>
           </div>
           <div className='invitation-container'>
@@ -51,16 +59,6 @@ const ServiceInfo = () => {
                 Thank you and enjoy.
                 <span>Pastor Norb Levesque</span>
               </blockquote>
-              {/* <p>
-                Let me take a moment to extend a personal welcome to you and
-                your family, and invite you to experience God at Woodland Valley
-                in a real, relevant, and relational way. God is not playing some
-                celestial game of hide and seek. He desires an intimate
-                relationship with each and every one of us. Join us as we
-                journey towards God in a way that will impact your life for
-                years to come, and for all eternity. Thank you and enjoy.
-              </p>
-              <div className='tag'>- Pastor Norb Levesque</div> */}
             </div>
           </div>
         </div>
@@ -108,7 +106,9 @@ const ServiceInfo = () => {
           <AiOutlineCalendar className='icon' />
           Join Us This Sunday!
         </h4>
-        <button className='section-button'>Directions And Details</button>
+        <button onClick={handleOnClick} className='section-button'>
+          Directions And Details
+        </button>
       </div>
     </div>
   )

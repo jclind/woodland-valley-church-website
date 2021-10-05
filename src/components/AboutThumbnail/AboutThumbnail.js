@@ -1,9 +1,9 @@
 import React from 'react'
 import './AboutThumbnail.css'
 import churchImage from '../../assets/images/wv-church-image.jpg'
-const AboutThumbnail = () => {
+const AboutThumbnail = ({ passRef }) => {
   return (
-    <div className='about-component section-container'>
+    <div className='about-component section-container' ref={passRef}>
       <div className='about-component-container section'>
         <div className='content'>
           <h1 className='section-title'>About WVC</h1>

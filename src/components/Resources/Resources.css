@@ -22,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-basis: 100%;
 }
 .resources-component .items img {
   padding-bottom: 1rem;
@@ -45,7 +44,8 @@
 
 @media screen and (min-width: 815px) {
   .resources-component .items {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
   .resources-component .items img {
@@ -54,7 +54,7 @@
 }
 @media screen and (min-width: 992px) {
   .resources-component .items {
-    flex-direction: row;
+    /* flex-direction: row; */
     gap: 4rem;
   }
   .resources-component .items img {
