@@ -259,6 +259,9 @@ nav ul ul.show {
   nav .expand {
     display: none;
   }
+  .visit-link {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {

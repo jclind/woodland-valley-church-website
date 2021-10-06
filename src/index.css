@@ -104,7 +104,7 @@ html {
 body {
   height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: var(--backgroundColor);
   color: var(--textColor);
   font-family: var(--bodyFont);
@@ -287,7 +287,6 @@ a {
   font-size: 3rem;
   font-weight: bold;
   color: var(--gray-1000);
-  white-space: nowrap;
 }
 .section-subtitle {
   padding: 0;
