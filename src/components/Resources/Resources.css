@@ -45,8 +45,23 @@
 @media screen and (min-width: 815px) {
   .resources-component .items {
     display: grid;
+    grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    height: 500px;
+  }
+  .resources-component .resource .section-text {
+    margin: auto 0;
+    padding-bottom: 3rem;
+  }
+  .resources-component .resource button {
+    margin-top: auto;
+  }
+  .resources-component .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
   }
   .resources-component .items img {
     max-width: 80%;
