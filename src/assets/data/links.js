@@ -18,8 +18,12 @@ export const links = [
     path: '/ministries',
     subLinks: [
       {
-        name: 'our ministries',
+        name: 'Church ministries',
         path: '/ministries',
+      },
+      {
+        name: "Children's ministries",
+        path: '/childrens-ministries',
       },
       {
         name: 'events',

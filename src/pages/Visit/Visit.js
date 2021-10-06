@@ -33,7 +33,7 @@ const Visit = () => {
               </p>
               <p className='section-text childrens-ministry-text'>
                 *Children's ministry available every Sunday. <br />
-                <Link to='/' className='link'>
+                <Link to='/childrens-ministries' className='link'>
                   More Details
                 </Link>
               </p>

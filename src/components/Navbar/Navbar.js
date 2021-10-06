@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/woodland-valley-logo.png'
@@ -8,6 +9,25 @@ import { useWindowSize } from '../../util/useWindowSize'
 
 const NavLinkElement = ({ link, show, setShow }) => {
   const [expanded, setExpanded] = useState(false)
+  const location = useLocation()
+
+  const itemRef = useRef(null)
+  // Close other open dropdowns when clicked outside of currently open dropdown
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, false)
+    return () => {
+      document.removeEventListener('click', handleClickOutside, false)
+    }
+  }, [])
+  const handleClickOutside = event => {
+    if (itemRef.current && !itemRef.current.contains(event.target)) {
+      setExpanded(false)
+    }
+  }
+
+  React.useEffect(() => {
+    setExpanded(false)
+  }, [location])
 
   useEffect(() => {
     if (!show) {
@@ -16,7 +36,7 @@ const NavLinkElement = ({ link, show, setShow }) => {
   }, [show])
   const handleOnClick = () => {
     if (
-      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       )
     ) {
@@ -30,9 +50,24 @@ const NavLinkElement = ({ link, show, setShow }) => {
   return (
     <li
       onMouseEnter={() => {
-        setExpanded(true)
+        if (
+          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          setExpanded(true)
+        }
       }}
-      onMouseLeave={() => setExpanded(false)}
+      onMouseLeave={() => {
+        if (
+          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          setExpanded(false)
+        }
+      }}
+      ref={itemRef}
     >
       {link.subLinks ? (
         <button

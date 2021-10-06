@@ -100,7 +100,6 @@
   }
   .give-page .other-options-container .articles article {
     margin: 0 auto;
-    height: 100%;
     max-width: 350px;
     flex: 1;
   }

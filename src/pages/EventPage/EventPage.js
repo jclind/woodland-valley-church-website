@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
 import { events } from '../../assets/data/events'
@@ -16,16 +16,12 @@ const EventPage = () => {
   const { name, img, date, time, description, address } = currEvent
   const d = new Date(date)
 
-  useEffect(() => {
-    // document.body.scrollTop = document.documentElement.scrollTop = 0
-  }, [])
-
   return (
     <div className='page event-page'>
       <div className='section-container'>
         <div className='section'>
           <Link to='/events' className='back-btn'>
-            <BsArrowLeft className='arrow' />
+            <BsArrowLeft className='back-arrow' />
             Back To Events
           </Link>
           <div className='image-container'>
