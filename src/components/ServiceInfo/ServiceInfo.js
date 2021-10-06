@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router'
 import './ServiceInfo.css'
 import { WiTime10 } from 'react-icons/wi'
