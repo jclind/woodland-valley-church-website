@@ -156,6 +156,8 @@ nav ul ul.show {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
   nav .links {
     position: relative;
