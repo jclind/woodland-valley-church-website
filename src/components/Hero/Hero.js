@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useHistory } from 'react-router'
 import homeImage from '../../assets/images/woodland-valley-home.jpg'
 import { useWindowSize } from '../../util/useWindowSize'
 import './Hero.css'
 const Hero = ({ scrollToComponent }) => {
   const { height } = useWindowSize()
-
+  const history = useHistory()
   return (
     <div
       className='hero-container'
@@ -23,8 +24,17 @@ const Hero = ({ scrollToComponent }) => {
             <span>10AM Every Sunday</span>
           </h2>
           <div className='btns'>
-            <button className='btn'>Online</button>
-            <button className='btn'>In-Person</button>
+            <button className='btn' onClick={() => {}}>
+              Online
+            </button>
+            <button
+              className='btn'
+              onClick={() => {
+                history.push('/visit')
+              }}
+            >
+              In-Person
+            </button>
           </div>
           <div className='arrow' onClick={scrollToComponent}></div>
         </div>

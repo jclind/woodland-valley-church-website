@@ -1,7 +1,10 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 import './AboutThumbnail.css'
 import churchImage from '../../assets/images/wv-church-image.jpg'
 const AboutThumbnail = ({ passRef }) => {
+  const history = useHistory()
+
   return (
     <div className='about-component section-container' ref={passRef}>
       <div className='about-component-container section'>
@@ -13,7 +16,14 @@ const AboutThumbnail = ({ passRef }) => {
             world, come together as His family and commit to helping that family
             grow closer to Him. This purpose is drawn from God’s Holy Word.
           </p>
-          <button className='btn section-button'>More About Us</button>
+          <button
+            className='btn section-button'
+            onClick={() => {
+              history.push('/about')
+            }}
+          >
+            More About Us
+          </button>
         </div>
         <div className='image'>
           <img src={churchImage} alt='' className='img' />

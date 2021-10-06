@@ -1,5 +1,5 @@
 import Layout from './components/Layout/Layout'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import 'normalize.css'
 import About from './pages/About/About'
 import Beliefs from './pages/Beliefs/Beliefs'
